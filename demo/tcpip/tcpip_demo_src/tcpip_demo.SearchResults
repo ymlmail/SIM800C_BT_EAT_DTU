@@ -1,0 +1,3 @@
+---- eat_soc_recvfrom Matches (2 in 1 files) ----
+Eat_socket.h (e:\sim800c_bt_eat_20150522\core\inc): *         Name: eat_soc_recvfrom
+Eat_socket.h (e:\sim800c_bt_eat_20150522\core\inc):extern s32 (* const eat_soc_recvfrom)(s8 s, void *buf, s32 len, sockaddr_struct *fromaddr);

@@ -1,0 +1,4 @@
+---- EAT_USER_MSG_MAX_SIZE Matches (4 in 1 files) ----
+Eat_interface.h (e:\sim800c_bt_eat_20150522\core\inc):#define EAT_USER_MSG_MAX_SIZE 64 
+Eat_interface.h (e:\sim800c_bt_eat_20150522\core\inc):    unsigned char data[EAT_USER_MSG_MAX_SIZE];
+Eat_interface.h (e:\sim800c_bt_eat_20150522\core\inc):*                      max size is EAT_USER_MSG_MAX_SIZE-1 byte, more than EAT_USER_MSG_MAX_SIZE-1 byte of data will be discarded off.

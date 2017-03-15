@@ -1,0 +1,22 @@
+---- eat_sms_read_cb Matches (21 in 1 files) ----
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, msg=%s",smsFlashMessage.data);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, datetime=%s",smsFlashMessage.datetime);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, name=%s",smsFlashMessage.name);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, status=%d",smsFlashMessage.status);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, len=%d",smsFlashMessage.len);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, number=%s",smsFlashMessage.number);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, msg=%s",smsFlashMessage.data);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, len=%d",smsFlashMessage.len);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):static void eat_sms_read_cb(EatSmsReadCnf_st  smsReadCnfContent)
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):    eat_trace("eat_sms_read_cb, format=%d",format);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, msg=%s",smsReadCnfContent.data);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, datetime=%s",smsReadCnfContent.datetime);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, name=%s",smsReadCnfContent.name);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, status=%d",smsReadCnfContent.status);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, len=%d",smsReadCnfContent.len);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, number=%s",smsReadCnfContent.number);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, msg=%s",smsReadCnfContent.data);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, name=%s",smsReadCnfContent.name);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, status=%d",smsReadCnfContent.status);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        eat_trace("eat_sms_read_cb, len=%d",smsReadCnfContent.len);
+App_demo_sms.c (e:\sim800c_bt_eat_20150522\demo\smsapi):        ret_val = eat_read_sms(index,eat_sms_read_cb);

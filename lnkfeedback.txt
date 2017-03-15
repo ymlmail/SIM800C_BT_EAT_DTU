@@ -1,0 +1,8 @@
+;#<FEEDBACK># ARM Linker, RVCT3.1 [Build 569]: Last Updated: Mon Mar 13 11:22:18 2017
+;VERSION 0.2
+;FILE app_at_cmd_envelope.o
+simcom_urc_queue_append <= USED 0
+simcom_urc_queue_remove <= USED 0
+;FILE app_demo_http.o
+;FILE main.o
+$Sub$$__user_initial_stackheap <= USED 0

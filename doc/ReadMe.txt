@@ -1,0 +1,1 @@
+SIM800C does not contain the SPI, PWM, I2C and SD card functions.

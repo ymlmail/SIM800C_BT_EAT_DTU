@@ -1,0 +1,17 @@
+---- eat_fs_Read Matches (16 in 2 files) ----
+App_demo_fs.c:*			eat_fs_Read 
+App_demo_fs.c:	/*test read file interface: eat_fs_Read*/
+App_demo_fs.c:	fs_Op_ret = (eat_fs_error_enum)eat_fs_Read(testFileHandle,readBuf,2500,&readLen);
+App_demo_fs.c:		eat_trace("eat_fs_Read():Read File Fail,and Return Error is %d,Readlen is %d",fs_Op_ret,readLen);
+App_demo_fs.c:		eat_trace("eat_fs_Read():Read File Success");
+App_demo_fs.c:	/*test read file interface: eat_fs_Read*/
+App_demo_fs.c:	fs_Op_ret = (eat_fs_error_enum)eat_fs_Read(testFileHandle,readBuf,2500,&readLen);
+App_demo_fs.c:		eat_trace("eat_fs_Read():Read File Fail,and Return Error is %d,Readlen is %d",fs_Op_ret,readLen);
+App_demo_fs.c:		eat_trace("eat_fs_Read():Read File Success");
+App_demo_fs.c:	/*test read file interface: eat_fs_Read*/
+App_demo_fs.c:	fs_Op_ret = (eat_fs_error_enum)eat_fs_Read(testFileHandle_l,readBuf,100,&readLen);
+App_demo_fs.c:		eat_trace("eat_fs_Read():Read File Fail,and Return Error is %d,Readlen is %d",fs_Op_ret,readLen);
+App_demo_fs.c:		eat_trace("eat_fs_Read():Read File Success");
+Eat_fs.h (e:\sim800c_bt_eat_20150522\core\inc): * Function :eat_fs_Read
+Eat_fs.h (e:\sim800c_bt_eat_20150522\core\inc): *     If eat_fs_Read returns EAT_FS_NO_ERROR, but *Read is less than 
+Eat_fs.h (e:\sim800c_bt_eat_20150522\core\inc):extern int (* const eat_fs_Read)(FS_HANDLE FileHandle, void * DataPtr, UINT Length, UINT * Read);

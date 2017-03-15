@@ -1,0 +1,5 @@
+---- eat_http_data_rsp_hdlr Matches (4 in 1 files) ----
+App_demo_http.c:static AtCmdRsp eat_http_data_rsp_hdlr(u8 *pRspStr)
+App_demo_http.c:     eat_trace("eat_http_data_rsp_hdlr: pRspStr = %s", pRspStr);
+App_demo_http.c:     eat_trace("eat_http_data_rsp_hdlr: rspType = %d", rspType);
+App_demo_http.c:         "AT+HTTPDATA=", 0, eat_http_data_rsp_hdlr /* 0  */

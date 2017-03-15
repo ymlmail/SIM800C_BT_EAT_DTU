@@ -1,0 +1,22 @@
+---- s_urcEntityQueue Matches (26 in 1 files) ----
+App_at_cmd_envelope.c:static UrcEntityQueue s_urcEntityQueue={
+App_at_cmd_envelope.c:    if (s_urcEntityQueue.count == URC_QUEUE_COUNT)
+App_at_cmd_envelope.c:    s_urcEntityQueue.urcEntityArray[s_urcEntityQueue.count] = urcEntity;
+App_at_cmd_envelope.c:		s_urcEntityQueue.urcEntityArray[s_urcEntityQueue.count].p_urcStr,
+App_at_cmd_envelope.c:		s_urcEntityQueue.urcEntityArray[s_urcEntityQueue.count].p_urcCallBack);
+App_at_cmd_envelope.c:    s_urcEntityQueue.count ++;
+App_at_cmd_envelope.c:	eat_trace("simcom_urc_queue_append: count = %d", s_urcEntityQueue.count);
+App_at_cmd_envelope.c:	eat_trace("simcom_urc_queue_remove begin: count = %d", s_urcEntityQueue.count);
+App_at_cmd_envelope.c:	for(i = 0; i < s_urcEntityQueue.count; i++)
+App_at_cmd_envelope.c:		if(strcmp(s_urcEntityQueue.urcEntityArray[i].p_urcStr, urcEntity.p_urcStr) == 0
+App_at_cmd_envelope.c:			&& s_urcEntityQueue.urcEntityArray[i].p_urcCallBack == urcEntity.p_urcCallBack)
+App_at_cmd_envelope.c:	for(i = index; i < s_urcEntityQueue.count; i++)
+App_at_cmd_envelope.c:			s_urcEntityQueue.urcEntityArray[i] = s_urcEntityQueue.urcEntityArray[i + 1];
+App_at_cmd_envelope.c:			s_urcEntityQueue.urcEntityArray[i].p_urcStr = NULL;
+App_at_cmd_envelope.c:			s_urcEntityQueue.urcEntityArray[i].p_urcCallBack = NULL;
+App_at_cmd_envelope.c:    s_urcEntityQueue.count--;
+App_at_cmd_envelope.c:	eat_trace("simcom_urc_queue_remove end: count = %d", s_urcEntityQueue.count);
+App_at_cmd_envelope.c:        for (i = 0; i < s_urcEntityQueue.count; i++)
+App_at_cmd_envelope.c:            if (!strncmp(s_urcEntityQueue.urcEntityArray[i].p_urcStr, p, strlen(s_urcEntityQueue.urcEntityArray[i].p_urcStr))) {
+App_at_cmd_envelope.c:                if(s_urcEntityQueue.urcEntityArray[i].p_urcCallBack)
+App_at_cmd_envelope.c:                    s_urcEntityQueue.urcEntityArray[i].p_urcCallBack(p,len);

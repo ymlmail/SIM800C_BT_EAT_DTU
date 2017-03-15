@@ -1,0 +1,4 @@
+---- EAT_DEBUG_STRING_INFO_MODE Matches (3 in 1 files) ----
+App_demo_flash.c://#define EAT_DEBUG_STRING_INFO_MODE
+App_demo_flash.c:#ifdef EAT_DEBUG_STRING_INFO_MODE
+App_demo_flash.c:#ifdef EAT_DEBUG_STRING_INFO_MODE

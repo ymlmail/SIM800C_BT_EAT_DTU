@@ -1,0 +1,2 @@
+---- LINE Matches (1 in 1 files) ----
+App_demo_uart.c:    eat_trace("%s-%d: app_user1 ENTRY", __FILE__, __LINE__);
