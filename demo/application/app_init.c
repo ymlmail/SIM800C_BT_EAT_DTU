@@ -117,11 +117,11 @@ void ReadNvramData(void)
 		readNvramBuf[i]=0;
 	ret=app_nvram_read(NVRAM_ADDR_MAX, readNvramBuf,10);
 	eat_trace("eat_fs_Read():Read File Success!ret=%d,%s",ret,readNvramBuf);
-	if(0!=strcmp(readNvramBuf,"0x55.0xAA#"))
+	if(0!=strcmp(readNvramBuf,"0x66.0xAA#"))
 		{
 		eat_trace("init nvram files\n");
-		app_nvram_save(NVRAM_ADDR_MAX, "0x55.0xAA#",10);
-		app_nvram_save(SERVER_ADDR, "222.211.65.62,8888",18);
+		app_nvram_save(NVRAM_ADDR_MAX, "0x66.0xAA#",10);
+		app_nvram_save(SERVER_ADDR, "119.23.74.240,8080",18);
 		
 		//app_nvram_save(SOS_NUM_1_ADDR, "13320984483",11);
 		//app_nvram_save(SOS_NUM_2_ADDR, "15008464603",11);
@@ -175,6 +175,7 @@ else
 }
 }
 
+#if EnableGPSModule
 void intGpsModule(void)
 {
 	TRACE_DEBUG("++++++++++++++++Start GPS SET+++++++++++++++++++");
@@ -192,5 +193,5 @@ void intGpsModule(void)
 	eat_uart_write(eat_uart_GPS, "$CCSIR,3,1*4A\r\n", 15);//BD2/GPSË«Ä££¨ÀäÆô¶¯£©
 	TRACE_DEBUG("++++++++++++++++END GPS SET+++++++++++++++++++");
 }
-
+#endif
 

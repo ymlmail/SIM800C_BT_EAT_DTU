@@ -66,8 +66,10 @@ sockaddr_struct g_server_address =		//默认设置，开机时会读取短信设置的服务器
 {
     SOC_SOCK_STREAM,
     4,
-    8888,              //server port
-    {222,211,65,62}  //server IP  宝星科技服务器IP
+   // 8888,              //server port
+  //  {222,211,65,62}  //server IP  宝星科技服务器IP
+    8080,              //server port
+    {119,23,74,240}  //server IP  yumComServer IP
 };
 u8 SosNumber[4][12]=
 {

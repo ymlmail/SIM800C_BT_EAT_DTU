@@ -6,5 +6,7 @@ extern void App_initTimer(void);
 
 extern void GlobalVariableInit(void);
 extern void ReadNvramData(void);
+#if EnableGPSModule
 extern void intGpsModule(void);
 #endif
+#endif //__APP_INIT_H__

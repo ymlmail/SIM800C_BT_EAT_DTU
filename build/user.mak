@@ -32,7 +32,7 @@ OUTPUT_LOG_DIR = output/log
 #SRC_OPEN_MODE_NAME = audio
 #SRC_OPEN_MODE_NAME = system
 #SRC_OPEN_MODE_NAME = tcpip
-SRC_OPEN_MODE_NAME = http
+SRC_OPEN_MODE_NAME = application
 
 #Macro definition
 # FEA_APP_EXAMPLE_OPT = -DAPP_EXAMPLE

@@ -26,16 +26,14 @@
 
 #define DebugMsgOnOff		1
 
-#define UsbAsPort			0
-#define disablecode			1
 
 
 #define SeverDataMax		100
 
 #define UseATCOMMON			0
-#define EnableGPSModule		1
+#define EnableGPSModule		0
 #define EnableGpsDebuge		1&&EnableGPSModule&&DebugOn
-#define EnableKeyFunction	1
+#define EnableKeyFunction	0
 
 
 #define USE_INT_AUTO_INVERT	0

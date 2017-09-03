@@ -50,7 +50,7 @@ extern u8 NoUsedPin;
 //#define app_uart_debug EAT_UART_1
 
 #define eat_uart_app	EAT_UART_USB//EAT_UART_1
-#define app_uart_debug	EAT_UART_USB
+#define app_uart_debug	EAT_UART_1
 #define eat_uart_GPS	EAT_UART_2	//2015-10-17  add gps/bdµ¼º½
 
 

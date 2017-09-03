@@ -1,8 +1,48 @@
-;#<FEEDBACK># ARM Linker, RVCT3.1 [Build 569]: Last Updated: Mon Mar 13 11:22:18 2017
+;#<FEEDBACK># ARM Linker, RVCT3.1 [Build 569]: Last Updated: Sat Aug 26 21:22:16 2017
 ;VERSION 0.2
+;FILE App_logic.o
+Ask_ModuleLBSmsg <= USED 0
+;FILE App_ram.o
 ;FILE app_at_cmd_envelope.o
+AtCmdCbCIFSR <= USED 0
+AtCmdCbCIPSHUT <= USED 0
+AtCmdCbCIPSTART <= USED 0
+AtCmdCb_cips <= USED 0
+CALL_AT_ATA <= USED 0
+CALL_AT_ATD <= USED 0
+CALL_AT_ATH <= USED 0
+simcom_ftp_down_file <= USED 0
 simcom_urc_queue_append <= USED 0
 simcom_urc_queue_remove <= USED 0
-;FILE app_demo_http.o
+;FILE app_custom.o
+GetKeypadButton <= USED 0
+ScanGpioKey <= USED 0
+Scankey <= USED 0
+KeyFunction <= USED 0
+;FILE app_demo_sms.o
+simcom_read_sms_interface_register <= USED 0
+simcom_sms_sc_set <= USED 0
+;FILE app_init.o
+App_initTimer <= USED 0
+;FILE app_sms_pdu_decode.o
+;FILE app_tcpip.o
+cmd_IPconnect_cb <= USED 0
+simcom_gethostbyname <= USED 0
+simcom_recv_from_server <= USED 0
+simcom_tcpip_test <= USED 0
+;FILE app_utility.o
+app_fs_abort <= USED 0
+app_fs_close <= USED 0
+app_fs_commit <= USED 0
+app_fs_create_dir <= USED 0
+app_fs_del <= USED 0
+app_fs_seek <= USED 0
+app_update <= USED 0
+bytepos <= USED 0
+upperstr <= USED 0
 ;FILE main.o
 $Sub$$__user_initial_stackheap <= USED 0
+Delayms <= USED 0
+eat_modem_data_parse <= USED 0
+;FILE user_communication.o
+sw16hl <= USED 0

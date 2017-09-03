@@ -121,9 +121,8 @@ eat_uart_set_debug: set debug port
 eat_pin_set_mode: set GPIO mode
 eat_uart_set_at_port: set AT port
 */
- // eat_sim_detect_en(EAT_FALSE); //disable SIM card detection and will use PIN54 as eint
   
-#if 0
+#if 1
     EatUartConfig_st cfg =
     {
         EAT_UART_BAUD_115200,
@@ -135,6 +134,7 @@ eat_uart_set_at_port: set AT port
     eat_uart_set_debug(EAT_UART_1);
    eat_uart_set_at_port(EAT_UART_2);// UART1 is as AT PORT
 	eat_uart_set_debug_config(EAT_UART_1, &cfg);
+	eat_uart_set_debug_config(EAT_UART_DEBUG_MODE_UART, NULL);
 	eat_uart_set_debug_config(EAT_UART_2, &cfg);
 #else
     EatUartConfig_st cfg =
@@ -387,31 +387,35 @@ const u8 MsgLog[EAT_EVENT_NUM][35]=
 void custom_entry(void)
 {
     EatEvent_st event;
+	
  	app_mem_init();  //Memory
     eat_sleep(1000);//
 	app_uart_init(); //UART
-    eat_sleep(1000);//
+    eat_sleep(1000);  
+    eat_trace("%s-%d: custom_entry\n", __FILE__, __LINE__);
 	//eat_modem_write("AT+CALS=18,0\r\n",strlen("AT+CALS=18,0\r\n"));
 	//eat_trace("END play poweron music!\n");at+CRSL=100
 	//eat_modem_write("AT+CRSL=80\r\n",strlen("AT+CRSL=80\r\n"));
 	GlobalVariableInit();
 	eat_get_imei(g_imei_sn,16);
 	TRACE_DEBUG("++++++++++++++++++++++++++++++++");
-    eat_trace("%s-%d: custom_entry\n", __FILE__, __LINE__);
-	TRACE_DEBUG("yemaolin VISION %s %s\n",__DATE__,__TIME__);
-    eat_uart_write(eat_uart_app,"\r\nAPP entry!\r\nVersion:1.0\r\n",27);
+	TRACE_DEBUG("YuCom:  %s %s\n",__DATE__,__TIME__);
+    eat_uart_write(app_uart_debug,"\r\nAPP entry!\r\nVersion:1.0\r\n",27);
 	eat_trace("Core version=%s",eat_get_version());
 	eat_trace("Core buildtime=%s",eat_get_buildtime());
 	eat_trace("Core buildno=%s",eat_get_buildno());	
 	eat_trace("eat_get_imei=%s",g_imei_sn);
 	TRACE_DEBUG("++++++++++++++++++++++++++++++++");
-
+	
+#if EnableGPSModule
 	intGpsModule();
 	eat_gpio_write(GPSPOWER_PIN,EAT_GPIO_LEVEL_HIGH);
-#if DebugOn
-	TRACE_DEBUG("GPSPOWER_PIN LOW  gps POWER off  33");
 #endif
 
+#if EnableGpsDebuge
+	TRACE_DEBUG("GPSPOWER_PIN LOW  gps POWER off  33");
+#endif
+#if 0
 //cgatt = eat_network_get_cgatt();
 //eat_trace("cgatt =%d", cgatt);
 //creg=eat_network_get_creg();
@@ -422,6 +426,7 @@ eat_modem_write("AT+CLVL=15\r\n",strlen("AT+CLVL=15\r\n"));
 eat_sleep(50);
 eat_modem_write("AT+CRSL=100\r\n",strlen("AT+CRSL=100\r\n"));
 eat_sleep(50);
+#endif
 eat_modem_set_poweron_urc_dir(EAT_USER_1);//一般默认都是user0   ，内核core的信息回复给EAT_USER_0
 eat_sleep(50);
 
@@ -537,18 +542,14 @@ void app_main(void *data)
 #if 0//EnableKeyFunction
 	init_GPIO();
 #endif
+	
+#if EnableGpsDebuge
 	eat_gpio_write(GPSPOWER_PIN,EAT_GPIO_LEVEL_LOW);
-#if DebugOn
 	TRACE_DEBUG("GPSPOWER_PIN LOW  gps POWER on  22");
 #endif
-
     APP_InitRegions();//Init app RAM, first step
     APP_init_clib();  //C library initialize, second step
-
     para = (EatEntryPara_st*)data;
-    TRACE_DEBUG("yml delay start111\n");
-	// Delayms(5000);
-   // TRACE_DEBUG("yml delay end1111\n");
 	//eat_sleep_enable(EAT_FALSE);//YML ADD
     memcpy(&app_para, para, sizeof(EatEntryPara_st));
     eat_trace("App Main ENTRY update:%d result:%d", app_para.is_update_app,app_para.update_app_result);
@@ -574,11 +575,6 @@ void app_main(void *data)
 	{
 		eat_trace("Timer test 3 get rtc fail");
 	}		
-	//eat_sim_detect_en(EAT_FALSE); //disable SIM card detection and will use PIN54 as eint
-	eat_poweroff_key_sw(TRUE);		//使能开机按键可以进行长按关机
-	//eat_modem_write("AT+CALS=18,1\r\n",strlen("AT+CALS=18,1\r\n"));
-//	eat_trace("play poweron music!\n");
-
 
     custom_entry();
 	
